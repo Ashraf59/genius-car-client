@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import img from '../../assets/images/login/login.svg'
+import img from '../../assets/images/login/register.svg'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Signup = () => {
