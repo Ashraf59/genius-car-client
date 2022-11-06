@@ -9,7 +9,7 @@ const Orders = () => {
 
     useEffect(()=> {
 
-        fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+        fetch(`https://genius-car-server-two-kappa.vercel.app/orders?email=${user?.email}`, {
           headers: {
             authorization: `Bearer ${localStorage.getItem('genius-token')}`
           }
@@ -31,7 +31,7 @@ const Orders = () => {
     const handleDelete = id => {
       const proceed = window.confirm('Are you sure to cancel the order')
       if(proceed){
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://genius-car-server-two-kappa.vercel.app/orders/${id}`, {
           method: 'DELETE'
 
         })
@@ -48,7 +48,7 @@ const Orders = () => {
     }
 
     const handleStatusUpdate = id => {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://genius-car-server-two-kappa.vercel.app/orders/${id}`, {
         method: 'PATCH',
         headers: {
           'content-type': 'application/json'
